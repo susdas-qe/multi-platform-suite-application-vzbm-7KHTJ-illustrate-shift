@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: multi-platform-suite-component-kugr
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: multi-platform-suite-component-kugr
+    app.kubernetes.io/part-of: multi-platform-suite-application-vzbm
+  name: multi-platform-suite-component-kugr
+spec:
+  ports:
+  - name: "8081"
+    port: 8081
+    targetPort: 8081
+  selector:
+    app.kubernetes.io/instance: multi-platform-suite-component-kugr
+status:
+  loadBalancer: {}
